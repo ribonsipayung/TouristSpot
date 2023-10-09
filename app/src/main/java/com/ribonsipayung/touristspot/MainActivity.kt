@@ -56,7 +56,7 @@ fun TouristSpotList() {
                 text = "Destinasi Wisata Populer di Indonesia",
                 style = MaterialTheme.typography.headlineMedium.copy(
                     fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.primary // Sesuaikan dengan warna yang Anda inginkan
+                    color = MaterialTheme.colorScheme.primary // Sesuaikan dengan warna yang kita inginkan
                 ),
                 modifier = Modifier
                     .fillMaxWidth()
@@ -83,8 +83,8 @@ fun TouristSpotItem(spot: TouristSpot) {
     // Card digunakan untuk mengelompokkan konten
     Card(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp),
+            .fillMaxWidth() // Mengisi lebar maksimum
+            .padding(16.dp), // Menambahkan padding
         elevation = CardDefaults.elevatedCardElevation(),
     ) {
         Column(
@@ -96,8 +96,8 @@ fun TouristSpotItem(spot: TouristSpot) {
                 painter = painterResource(id = spot.imageResId),
                 contentDescription = null,
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
+                    .fillMaxWidth() // Mengisi lebar maksimum
+                    .height(200.dp) // Menentukan tinggi gambar
                     .clip(MaterialTheme.shapes.medium)
             )
             Spacer(modifier = Modifier.height(16.dp))
